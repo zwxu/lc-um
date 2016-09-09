@@ -15,7 +15,7 @@
         <property name="ignoreUnresolvablePlaceholders" value="true" />
         <property name="locations">
             <list>
-                <value>classpath:/config/fundacct-config.properties</value>
+                <value>classpath:/config/config.properties</value>
             </list>
         </property>
     </bean>
@@ -24,46 +24,24 @@
         p:dataSource-ref="dataSource" />
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-        p:basePackage="com.payment.lc.fundacct.mapper" depends-on="propertyConfigurer" />
+        p:basePackage="com.zwxu.lc.um.mapper" depends-on="propertyConfigurer" />
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
         p:dataSource-ref="dataSource" />
 
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-        destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="${cashpay_lc_fundacct_master_url}" />
-        <property name="username" value="${cashpay_lc_fundacct_username}" />
-        <property name="password" value="${cashpay_lc_fundacct_password}" />
-        <property name="initialSize" value="${cashpaydpm.jdbc.initialSize}" />
-        <property name="maxActive" value="${cashpaydpm.jdbc.maxActive}" />
-        <property name="maxIdle" value="${cashpaydpm.jdbc.maxIdle}" />
-        <property name="minIdle" value="${cashpaydpm.jdbc.minIdle}" />
-        <property name="maxWait" value="${cashpaydpm.jdbc.maxWait}" />
-        <property name="testWhileIdle" value="${cashpaydpm.jdbc.testWhileIdle}" />
-        <property name="testOnBorrow" value="${cashpaydpm.jdbc.testOnBorrow}" />
-        <property name="validationQuery" value="${cashpaydpm.jdbc.validationQuery}" />
-        <property name="timeBetweenEvictionRunsMillis"
-            value="${cashpaydpm.jdbc.timeBetweenEvictionRunsMillis}" />
-        <property name="numTestsPerEvictionRun" value="${cashpaydpm.jdbc.numTestsPerEvictionRun}" />
-        <property name="minEvictableIdleTimeMillis"
-            value="${cashpaydpm.jdbc.minEvictableIdleTimeMillis}" />
-    </bean>
-
-	<bean id="expressCardDao" class="com.payment.lc.fundacct.dao.ExpressCardDao" />
-
-	<bean id="expressContractDao" class="com.payment.lc.fundacct.dao.ExpressContractDao" />
-
-	<bean id="expressRemoveDao" class="com.payment.lc.fundacct.dao.ExpressRemoveDao" />
-
-	<bean id="expressRequestDao" class="com.payment.lc.fundacct.dao.ExpressRequestDao" />
-
-	<bean id="memberCardContractDao" class="com.payment.lc.fundacct.dao.MemberCardContractDao" />
-
-	<bean id="memberCardDao" class="com.payment.lc.fundacct.dao.MemberCardDao" />
+    <bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
 	
-	<bean id="memberProductConfigDao" class="com.payment.lc.fundacct.dao.MemberProductConfigDao" />
+	
 
+	<bean id="userDao" class="com.zwxu.lc.um.dao.UserDao" />
+	
+	
     <!-- transcation -->
     <bean id="transactionManager"
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -74,28 +52,5 @@
         <property name="transactionManager" ref="transactionManager" />
     </bean>
 
-    <bean id="tfdpmdataSource" class="org.apache.commons.dbcp.BasicDataSource"
-        destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="${cashpay_lc_tfdpm_master_url}" />
-        <property name="username" value="${cashpay_lc_tfdpm_username}" />
-        <property name="password" value="${cashpay_lc_tfdpm_password}" />
-        <property name="initialSize" value="${cashpaydpm.jdbc.initialSize}" />
-        <property name="maxActive" value="${cashpaydpm.jdbc.maxActive}" />
-        <property name="maxIdle" value="${cashpaydpm.jdbc.maxIdle}" />
-        <property name="minIdle" value="${cashpaydpm.jdbc.minIdle}" />
-        <property name="maxWait" value="${cashpaydpm.jdbc.maxWait}" />
-        <property name="testWhileIdle" value="${cashpaydpm.jdbc.testWhileIdle}" />
-        <property name="testOnBorrow" value="${cashpaydpm.jdbc.testOnBorrow}" />
-        <property name="validationQuery" value="${cashpaydpm.jdbc.validationQuery}" />
-        <property name="timeBetweenEvictionRunsMillis"
-            value="${cashpaydpm.jdbc.timeBetweenEvictionRunsMillis}" />
-        <property name="numTestsPerEvictionRun" value="${cashpaydpm.jdbc.numTestsPerEvictionRun}" />
-        <property name="minEvictableIdleTimeMillis"
-            value="${cashpaydpm.jdbc.minEvictableIdleTimeMillis}" />
-    </bean>
-
-    <bean id="tfdpmjdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
-        p:dataSource-ref="tfdpmdataSource" />
-
+    
 </beans>

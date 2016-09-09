@@ -5,11 +5,11 @@
 <generatorConfiguration>
    
    <classPathEntry
-        location="D:\Program Files\maven\respositories\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+        location="D:\maven\respositories\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
     <context id="DB2Tables"    targetRuntime="MyBatis3">
        
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/shop" userId="root" password="">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/ustc" userId="root" password="">
         </jdbcConnection>
   	<javaModelGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-core/src/main/java" />
     <sqlMapGenerator targetPackage="com.zwxu.lc.um.mapper" targetProject="lc-um-core/src/main/java" />
