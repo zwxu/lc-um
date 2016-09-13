@@ -12,7 +12,7 @@
 		
 	<bean id="userQueryService" class="com.zwxu.lc.um.service.impl.UserQueryServiceImpl"></bean>
 	
-    
+    <bean id="sysConfig" class="com.zwxu.lc.um.service.impl.SysConfig"></bean>
     
 
 </beans>

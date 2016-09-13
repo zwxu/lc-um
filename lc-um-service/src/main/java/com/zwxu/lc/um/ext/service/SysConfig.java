@@ -1,48 +1,37 @@
-package com.zwxu.lc.um.task;
+package com.zwxu.lc.um.ext.service;
 
-import java.io.IOException;
-import java.util.List;
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.zwxu.lc.um.api.UserQueryService;
-import com.zwxu.lc.um.bean.UserInfo;
-import com.zwxu.lc.um.ext.service.SysConfig;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.springframework.beans.factory.InitializingBean;
 
-public class UserQueryTask {
-	/**
-	   * 4,5,6,7,8,9出现的概率为15%
-	   */
-		private static double rate0 = 0.15;
-		/**
-	   * 10出现的概率为10%
-	   */
-		private static double rate1 = 0.10;
-		private static double rate2 = 0.70;
-		private static double rate3 = 0.30;
+public class SysConfig implements InitializingBean{
 	
-	/*@Autowired
-    private UserQueryService uqService;*/
-	/*@Autowired
-    private SysConfig sysConfig;*/
+/**
+   * 4,5,6,7,8,9出现的概率为15%
+   */
+	private static double rate0 = 0.15;
+	/**
+   * 10出现的概率为10%
+   */
+	private static double rate1 = 0.10;
+	private static double rate2 = 0.70;
+	private static double rate3 = 0.30;
+	
+	private Map<Integer,Integer> randomMap;
 
-	private static Logger logger = Logger.getLogger(UserQueryTask.class);
-
-	public void run() throws IOException {
-		logger.info("start userQuery");
-		
-		/*List<UserInfo> list = uqService.query(0);
-		for(UserInfo info:list)
+	public int getRadom(int i)
+	{
+		return randomMap.get(i);
+	}
+	public void afterPropertiesSet() throws Exception {
 		{
-			System.out.println(info.getUsername());
-		}*/
-		int i = NewPercentageRandom();
-		System.out.println(i);
-		logger.info("end userQuery");
+			randomMap = new HashMap<Integer,Integer>();
+			randomMap.put(1, NewPercentageRandom());
+		}
+		System.out.println("random is: ");
 	}
 	
-	
-
 	private int OldPercentageRandom()
 	 {
 		 double randomNumber;
@@ -100,5 +89,4 @@ public class UserQueryTask {
 		 return 4;
 	 }
 
-	
 }

@@ -29,7 +29,7 @@
            </bean>
        </property>
        <property name="cronExpression">
-           <value>0 */1 23 * * ?</value>
+           <value>0 */1 14 * * ?</value>
        </property>
     </bean>
     
