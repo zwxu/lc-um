@@ -19,8 +19,8 @@ public class SendNoticeTask {
 		logger.info("start sendNotice");
 
 		//messageSender.sendInfo();
-		String message = messageReceiver.receiveMessage();
-		logger.info("get message is "+message);
+		//String message = messageReceiver.receive();
+		//logger.info("get message is "+message);
 		logger.info("end sendNotice");
 	}
 }

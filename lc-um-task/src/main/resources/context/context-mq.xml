@@ -16,12 +16,16 @@
     <!-- Spring JMS Template -->
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="connectionFactory"></property>        
-        <property name="defaultDestination" ref="destination"></property>        
+        <property name="defaultDestination" ref="destination"></property> 
+        <!-- 订阅发布模式 -->  
+        <property name="pubSubDomain" value="true" />         
         <property name="receiveTimeout" value="600"></property>
+        
     </bean>
 
     <!-- 发送消息的目的地（一个队列） -->
-    <bean id="destination" class="org.apache.activemq.command.ActiveMQTopic">
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+   <!--  <bean id="destination" class="org.apache.activemq.command.ActiveMQTopic"> -->
         <!-- 设置消息队列的名字 -->
         <constructor-arg index="0" value="com.zwxu.lc.um.queue1" />
     </bean>
@@ -33,9 +37,35 @@
         <!-- <property name="jmsTemplate" ref="jmsTemplate"></property> -->
     </bean>
     
-    <bean id="messageReceiver" class="com.zwxu.lc.um.service.ProxyJMSConsumer">
-        <!-- <property name="jmsTemplate" ref="jmsTemplate"></property> -->
-    </bean>
+    
+    
+     <!-- 消息监听器 -->  
+    <bean id="consumerMessageListener" class="com.zwxu.lc.um.service.ProxyJMSConsumer"/>  
+    <!-- 消息监听容器 -->  
+    <bean id="jmsContainer"  
+        class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+        <property name="connectionFactory" ref="connectionFactory" />  
+        <property name="destination" ref="destination" />  
+        <property name="messageListener" ref="consumerMessageListener" />  
+    </bean>  
+    
+  <!--      消息监听器  
+    <bean id="consumerMessageListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+    	<constructor-arg ref="messageReceiver"></constructor-arg>
+    	接收消息的方法名称  
+        <property name="defaultListenerMethod" value="receive" />  
+        不进行消息转换  
+        <property name="messageConverter"><null/></property>  
+    </bean>  
+    
+
+    消息监听容器  
+    <bean id="jmsContainer"  
+        class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+        <property name="connectionFactory" ref="connectionFactory" />  
+        <property name="destination" ref="destination" />  
+        <property name="messageListener" ref="consumerMessageListener" />  
+    </bean>   -->
     
     
     

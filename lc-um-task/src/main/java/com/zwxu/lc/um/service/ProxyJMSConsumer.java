@@ -3,6 +3,8 @@ package com.zwxu.lc.um.service;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.MapMessage;
+import javax.jms.Message;
+import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,7 @@ import org.springframework.jms.support.JmsUtils;
 * 消息题的内容定义
 * 消息对象 接收消息对象后： 接收到的消息体
 */
-public class ProxyJMSConsumer {
+public class ProxyJMSConsumer implements MessageListener{
 	
 
 	public ProxyJMSConsumer() {
@@ -28,16 +30,14 @@ public class ProxyJMSConsumer {
    /**
     * 监听到消息目的有消息后自动调用onMessage(Message message)方法
     */
-   public String receiveMessage() {
-       String my = "";
-       MapMessage message = (MapMessage) jmsTemplate.receive();
-       try {
-           my = message.getString("lastName");
-       } catch (JMSException e) {
-           throw JmsUtils.convertJmsAccessException(e);
-       }
-       return my;
-   }
+
+	public void onMessage(Message message) {
+		 try {
+	         System.out.println(((TextMessage)message).getStringProperty("lastName"));
+	     } catch (JMSException e) {
+	         throw JmsUtils.convertJmsAccessException(e);
+	     }
+	}
 
 
 
