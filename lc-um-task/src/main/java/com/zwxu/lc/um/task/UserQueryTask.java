@@ -21,8 +21,8 @@ public class UserQueryTask {
 		private static double rate2 = 0.70;
 		private static double rate3 = 0.30;
 	
-	/*@Autowired
-    private UserQueryService uqService;*/
+	@Autowired
+    private UserQueryService uqService;
 	/*@Autowired
     private SysConfig sysConfig;*/
 
@@ -31,13 +31,12 @@ public class UserQueryTask {
 	public void run() throws IOException {
 		logger.info("start userQuery");
 		
-		/*List<UserInfo> list = uqService.query(0);
+		List<UserInfo> list = uqService.query(0);
 		for(UserInfo info:list)
 		{
 			System.out.println(info.getUsername());
-		}*/
-		int i = NewPercentageRandom();
-		System.out.println(i);
+		}
+
 		logger.info("end userQuery");
 	}
 	

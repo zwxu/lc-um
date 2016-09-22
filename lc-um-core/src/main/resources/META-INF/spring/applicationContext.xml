@@ -12,6 +12,7 @@
 	<import resource="classpath:context/um-service-bean.xml" />
 	<import resource="classpath:context/context-service.xml" />
 	<import resource="classpath:context/context-dao.xml" />
+	<import resource="classpath:context/persistence-common.xml" />
     <import resource="classpath:META-INF/spring/spring-keyproperties.xml" />
 
 

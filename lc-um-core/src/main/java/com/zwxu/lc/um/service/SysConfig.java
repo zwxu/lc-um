@@ -1,4 +1,4 @@
-package com.zwxu.lc.um.service.impl;
+package com.zwxu.lc.um.service;
 
 import org.springframework.beans.factory.InitializingBean;
 

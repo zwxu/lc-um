@@ -14,8 +14,8 @@
         <property name="triggers">
             <list>
                 <ref bean="userQueryTrigger"/>
-                <ref bean="sendNoticeTrigger"/>
-                <ref bean="produceNoticeTrigger"/>
+                <!-- <ref bean="sendNoticeTrigger"/>
+                <ref bean="produceNoticeTrigger"/> -->
             </list>
         </property>
     </bean>
@@ -29,11 +29,11 @@
            </bean>
        </property>
        <property name="cronExpression">
-           <value>0 */1 21 * * ?</value>
+           <value>0 */1 17 * * ?</value>
        </property>
     </bean>
     
-    <bean id="sendNoticeTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+   <!--  <bean id="sendNoticeTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
        <property name="jobDetail">
            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
                <property name="targetObject" ref="sendNotice"/>
@@ -57,11 +57,11 @@
        <property name="cronExpression">
            <value>0 */1 18 * * ?</value>
        </property>
-    </bean>
+    </bean> -->
  
  	<bean id="userQuery" class="com.zwxu.lc.um.task.UserQueryTask"/>
- 	<bean id="sendNotice" class="com.zwxu.lc.um.task.SendNoticeTask"/>
- 	<bean id="produceNotice" class="com.zwxu.lc.um.task.ProduceNoticeTask"/>
+ 	<!-- <bean id="sendNotice" class="com.zwxu.lc.um.task.SendNoticeTask"/>
+ 	<bean id="produceNotice" class="com.zwxu.lc.um.task.ProduceNoticeTask"/> -->
 
 
 	<jaxws:client id="uqService"
