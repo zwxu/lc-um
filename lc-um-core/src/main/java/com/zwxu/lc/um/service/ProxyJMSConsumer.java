@@ -1,4 +1,4 @@
-package com.zwxu.lc.um.service;
+/*package com.zwxu.lc.um.service;
 
 import javax.jms.Destination;
 import javax.jms.TextMessage;
@@ -6,11 +6,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jms.core.JmsTemplate;
 
-/**
+*//**
 * JMS消费者
 * 消息题的内容定义
 * 消息对象 接收消息对象后： 接收到的消息体
-*/
+*//*
 public class ProxyJMSConsumer {
 
    public ProxyJMSConsumer() {
@@ -25,9 +25,9 @@ public class ProxyJMSConsumer {
        this.jmsTemplate = jmsTemplate;
    }
    
-   /**
+   *//**
     * 监听到消息目的有消息后自动调用onMessage(Message message)方法
-    */
+    *//*
    public void recive() {
        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-jms.xml");
        Destination destination = (Destination) applicationContext.getBean("destination");
@@ -49,3 +49,4 @@ public class ProxyJMSConsumer {
    }
 
 }
+*/

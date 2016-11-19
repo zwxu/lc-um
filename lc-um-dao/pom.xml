@@ -25,7 +25,16 @@
 	<artifactId>mybatis</artifactId>
 	<version>3.3.1</version>
 	</dependency>
-	
+	<dependency>
+                <groupId>com.ibatis</groupId>
+                <artifactId>ibatis2-dao</artifactId>
+                <version>2.1.7.597</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.ibatis</groupId>
+                <artifactId>ibatis-sqlmap</artifactId>
+                <version>2.3.4.726</version>
+            </dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -34,6 +43,16 @@
 		<dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
+        <version>3.1.0.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>3.1.0.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
         <version>3.1.0.RELEASE</version>
       </dependency>
 	</dependencies>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
 <ibatorConfiguration >
- <classPathEntry location="D:\Program Files\maven\respositories\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
+ <classPathEntry location="D:\maven\respositories\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
  
   <ibatorContext id="context1" >
   
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.99.168.53:3306/cashbase_lc_fcoupon" userId="mysql" password="mysql" />
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/ustc" userId="root" password="root">
+        </jdbcConnection>
      
-    <javaModelGenerator targetPackage="com.payment.lc.fcoupon.model" targetProject="shop/src/main/java" />
-    <sqlMapGenerator targetPackage="com.payment.lc.fcoupon.model" targetProject="shop/src/main/java" />
-    <daoGenerator targetPackage="com.payment.lc.fcoupon.model" targetProject="shop/src/main/java" type="SPRING" />
-    <table schema="cashbase_lc_fcoupon" tableName="t_vcapital_package" domainObjectName="VcapitalPackage">
-      <generatedKey column="ID" sqlStatement="MYSQL" identity="true"  />
-    </table>
+    <javaModelGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" />
+    <sqlMapGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" />
+    <daoGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" type="SPRING" />
+    <table tableName="t_user" domainObjectName="User">
+       <generatedKey column="ID" sqlStatement="MYSQL" identity="true"  />
+       </table>
   </ibatorContext>
 </ibatorConfiguration>

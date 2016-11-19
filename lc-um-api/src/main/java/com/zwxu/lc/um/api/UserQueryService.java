@@ -9,5 +9,5 @@ import com.zwxu.lc.um.bean.UserInfo;
 @WebService
 public interface UserQueryService {
 
-	List<UserInfo> query(int access);
+	List<UserInfo> query(int tid);
 }

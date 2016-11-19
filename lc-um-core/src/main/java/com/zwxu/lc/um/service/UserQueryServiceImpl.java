@@ -8,12 +8,13 @@ import com.zwxu.lc.um.bean.UserInfo;
 import com.zwxu.lc.um.dao.UserDao;
 import com.zwxu.lc.um.model.User;
 
+
 public class UserQueryServiceImpl implements UserQueryService{
 	@Autowired
 	UserDao userDao;
 
-	public List<UserInfo> query(int access) {
-		List<User> list = userDao.query(access);
+	public List<UserInfo> query(int tid) {
+		List<User> list = userDao.query(tid);
 		List<UserInfo> result = new ArrayList<UserInfo>();
 		if(null == list || list.isEmpty()) {
 			return result;
