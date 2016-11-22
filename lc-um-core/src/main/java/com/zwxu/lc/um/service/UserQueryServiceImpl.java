@@ -33,4 +33,17 @@ public class UserQueryServiceImpl implements UserQueryService{
 		return info;
 	}
 
+	public List<UserInfo> queryPage(int start, int pageSize) {
+		List<User> list = userDao.query(start,pageSize);
+		List<UserInfo> result = new ArrayList<UserInfo>();
+		if(null == list || list.isEmpty()) {
+			return result;
+		}
+		
+		for(User u : list) {
+			result.add(createUserInfo(u));
+		}
+		return result;
+	}
+
 }

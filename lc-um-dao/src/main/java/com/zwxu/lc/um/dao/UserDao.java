@@ -10,7 +10,6 @@ import com.zwxu.lc.um.model.User;
 import com.zwxu.lc.um.model.UserExample;
 
 public class UserDao {
-
 	
 	@Autowired
     private UserMapper userMapper;
@@ -33,10 +32,12 @@ public class UserDao {
 		return list;
 	}
 	
-	public List<User> query()
+	public List<User> query(int start ,int pageSize)
 	{
-		String sql="select * from t_user";
-		List<User> list=jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
+		String sql="select * from t_user ";
+		String final_sql = sql + String.format(" limit %d, %d ", start, pageSize);
+		System.out.print(final_sql);
+		List<User> list=jdbcTemplate.query(final_sql, new BeanPropertyRowMapper(User.class));
 		return list;
 	}
 

@@ -21,7 +21,7 @@ public class Main {
 		
 		UserDao	userDao=(UserDao) context.getBean("userDao");
 			
-			List<User> list=userDao.query(1);
+			List<User> list=userDao.query(1,10);
 			Iterator it=list.iterator();
 			while(it.hasNext()){
 			User user=(User) it.next();

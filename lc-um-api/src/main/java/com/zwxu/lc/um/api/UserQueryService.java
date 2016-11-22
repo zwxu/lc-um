@@ -10,4 +10,5 @@ import com.zwxu.lc.um.bean.UserInfo;
 public interface UserQueryService {
 
 	List<UserInfo> query(int tid);
+	List<UserInfo> queryPage(int start,int pageSize);
 }
