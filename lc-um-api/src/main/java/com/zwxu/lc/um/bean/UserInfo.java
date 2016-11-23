@@ -11,7 +11,7 @@ public class UserInfo implements Serializable {
 	private int id;
 	private String username;
 	private String password;
-	private int access;
+
 	private Date createTime;
 	public int getId() {
 		return id;
@@ -30,12 +30,6 @@ public class UserInfo implements Serializable {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public int getAccess() {
-		return access;
-	}
-	public void setAccess(int access) {
-		this.access = access;
 	}
 	public Date getCreateTime() {
 		return createTime;

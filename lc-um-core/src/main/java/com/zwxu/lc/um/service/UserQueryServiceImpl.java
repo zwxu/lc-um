@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.zwxu.lc.um.api.UserQueryService;
+import com.zwxu.lc.um.bean.QueryResult;
 import com.zwxu.lc.um.bean.UserInfo;
 import com.zwxu.lc.um.dao.UserDao;
 import com.zwxu.lc.um.model.User;
@@ -33,16 +34,20 @@ public class UserQueryServiceImpl implements UserQueryService{
 		return info;
 	}
 	
-	public List<UserInfo> queryPage(int start, int pageSize) {
+	public QueryResult queryPage(int start, int pageSize) {
+		int count = userDao.count();
 		List<User> list = userDao.query(start,pageSize);
-		List<UserInfo> result = new ArrayList<UserInfo>();
+		QueryResult result = new QueryResult();
+		List<UserInfo> userResult = new ArrayList<UserInfo>();
 		if(null == list || list.isEmpty()) {
-			return result;
+			return null;
 		}
 		
 		for(User u : list) {
-			result.add(createUserInfo(u));
+			userResult.add(createUserInfo(u));
 		}
+		result.setCount(count);
+		result.setInfo(userResult);
 		return result;
 	}
 
