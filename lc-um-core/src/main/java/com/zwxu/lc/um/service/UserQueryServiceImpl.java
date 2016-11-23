@@ -32,7 +32,7 @@ public class UserQueryServiceImpl implements UserQueryService{
 		info.setPassword(u.getPassword());
 		return info;
 	}
-
+	
 	public List<UserInfo> queryPage(int start, int pageSize) {
 		List<User> list = userDao.query(start,pageSize);
 		List<UserInfo> result = new ArrayList<UserInfo>();
