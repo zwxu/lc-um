@@ -4,17 +4,17 @@ import java.util.List;
 
 public class QueryResult {
 	private int count;
-	private List<UserInfo> info;
+	private List<AccountInfoResponse> info;
 	public int getCount() {
 		return count;
 	}
 	public void setCount(int count) {
 		this.count = count;
 	}
-	public List<UserInfo> getInfo() {
+	public List<AccountInfoResponse> getInfo() {
 		return info;
 	}
-	public void setInfo(List<UserInfo> info) {
+	public void setInfo(List<AccountInfoResponse> info) {
 		this.info = info;
 	}
 	

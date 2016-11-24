@@ -12,7 +12,7 @@
 
     
     
-    <bean id="userDao" class="com.zwxu.lc.um.dao.UserDao" /> 
+    <bean id="accountDao" class="com.zwxu.lc.um.dao.AccountDao" /> 
     <!-- <bean id="userDAO" class="com.zwxu.lc.um.model.UserDAOImpl" parent="sqlMapClientDAO"/> -->
 
 

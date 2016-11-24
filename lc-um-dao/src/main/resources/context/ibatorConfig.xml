@@ -11,7 +11,7 @@
     <javaModelGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" />
     <sqlMapGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" />
     <daoGenerator targetPackage="com.zwxu.lc.um.model" targetProject="lc-um-dao/src/main/java" type="SPRING" />
-    <table tableName="t_user" domainObjectName="User">
+    <table tableName="t_account" domainObjectName="Account">
        <generatedKey column="ID" sqlStatement="MYSQL" identity="true"  />
        </table>
   </ibatorContext>

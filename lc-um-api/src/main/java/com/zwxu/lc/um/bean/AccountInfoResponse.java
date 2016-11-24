@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-public class UserInfo implements Serializable {
+public class AccountInfoResponse extends BaseResult implements Serializable {
 
 	private static final long serialVersionUID = -2134815484432644948L;
 
 	private int id;
-	private String username;
+	private String loginname;
 	private String password;
 
 	private Date createTime;
@@ -19,11 +19,11 @@ public class UserInfo implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getLoginname() {
+		return loginname;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setLoginname(String loginname) {
+		this.loginname = loginname;
 	}
 	public String getPassword() {
 		return password;

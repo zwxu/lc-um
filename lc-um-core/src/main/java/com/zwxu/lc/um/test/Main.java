@@ -4,10 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.zwxu.lc.um.dao.AccountDao;
+import com.zwxu.lc.um.model.Account;
 
-import com.zwxu.lc.um.dao.UserDao;
-import com.zwxu.lc.um.model.User;
-import com.zwxu.lc.um.model.UserExample;
 
 
 public class Main {
@@ -19,13 +18,13 @@ public class Main {
 
 		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:/META-INF/spring/applicationContext.xml");
 		
-		UserDao	userDao=(UserDao) context.getBean("userDao");
+		AccountDao	userDao=(AccountDao) context.getBean("accountDao");
 		System.out.println(userDao.count());
-			List<User> list=userDao.query(0,10);
+			List<Account> list=userDao.query(1,10);
 			Iterator it=list.iterator();
 			while(it.hasNext()){
-			User user=(User) it.next();
-			System.out.println(user.getUsername());
+				Account user=(Account) it.next();
+				System.out.println(user.getLoginname());
 			}
 		}
 

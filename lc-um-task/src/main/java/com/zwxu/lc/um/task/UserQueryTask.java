@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.zwxu.lc.um.api.UserQueryService;
-import com.zwxu.lc.um.bean.UserInfo;
+
+import com.zwxu.lc.um.api.AccountQueryService;
+import com.zwxu.lc.um.bean.AccountInfoResponse;
 import com.zwxu.lc.um.ext.service.SysConfig;
 
 
@@ -22,7 +23,7 @@ public class UserQueryTask {
 		private static double rate3 = 0.30;
 	
 	@Autowired
-    private UserQueryService uqService;
+    private AccountQueryService uqService;
 	/*@Autowired
     private SysConfig sysConfig;*/
 
@@ -31,8 +32,8 @@ public class UserQueryTask {
 	public void run() throws IOException {
 		logger.info("start userQuery");
 		
-		List<UserInfo> list = uqService.query(0);
-		for(UserInfo info:list)
+		List<AccountInfoResponse> list = uqService.query(0);
+		for(AccountInfoResponse info:list)
 		{
 			System.out.println(info.getUsername());
 		}
