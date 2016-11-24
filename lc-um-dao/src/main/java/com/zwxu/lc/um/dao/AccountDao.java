@@ -46,7 +46,7 @@ public class AccountDao {
 		AccountExample example = new AccountExample();
 		example.createCriteria().andLoginnameEqualTo(username);
 		List<Account> list = accountMapper.selectByExample(example);
-		if(list !=null)
+		if(!list.isEmpty())
 		{
 			return true;
 		}

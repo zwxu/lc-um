@@ -19,7 +19,7 @@ public class Main {
 		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:/META-INF/spring/applicationContext.xml");
 		
 		AccountDao	userDao=(AccountDao) context.getBean("accountDao");
-		System.out.println(userDao.count());
+		System.out.println(userDao.checkAccount("haha"));
 			List<Account> list=userDao.query(1,10);
 			Iterator it=list.iterator();
 			while(it.hasNext()){
