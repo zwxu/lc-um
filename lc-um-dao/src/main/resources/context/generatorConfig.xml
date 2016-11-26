@@ -15,7 +15,7 @@
     <sqlMapGenerator targetPackage="com.zwxu.lc.um.mapper" targetProject="lc-um-dao/src/main/java" />
     <javaClientGenerator targetPackage="com.zwxu.lc.um.mapper" targetProject="lc-um-dao/src/main/java" type="XMLMAPPER" />
     
-        <table tableName="t_account" domainObjectName="Account">
+        <table tableName="t_student" domainObjectName="Student">
        <generatedKey column="ID" sqlStatement="MYSQL" identity="true"  />
        </table>
     </context>

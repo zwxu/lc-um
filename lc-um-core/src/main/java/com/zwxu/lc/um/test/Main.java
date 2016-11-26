@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.zwxu.lc.um.dao.AccountDao;
+import com.zwxu.lc.um.dao.StudentDao;
 import com.zwxu.lc.um.model.Account;
 
 
@@ -18,14 +19,9 @@ public class Main {
 
 		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:/META-INF/spring/applicationContext.xml");
 		
-		AccountDao	userDao=(AccountDao) context.getBean("accountDao");
-		System.out.println(userDao.checkAccount("haha"));
-			List<Account> list=userDao.query(1,10);
-			Iterator it=list.iterator();
-			while(it.hasNext()){
-				Account user=(Account) it.next();
-				System.out.println(user.getLoginname());
-			}
+		StudentDao	userDao=(StudentDao) context.getBean("studentDao");
+		System.out.println(userDao.count());
+			
 		}
 
 }
