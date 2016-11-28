@@ -8,8 +8,8 @@
 	<jaxws:endpoint id="stundentQueryService1" address="/studentQueryService"
 		implementor="#stundentQueryService" />
 
-	<!-- <jaxws:endpoint id="accountService1" address="/accountService"
-		implementor="#accountService" /> -->
+	<jaxws:endpoint id="menuQueryService1" address="/menuQueryService"
+		implementor="#menuQueryService" />
 
 
 		

@@ -14,6 +14,8 @@
     
     <bean id="accountDao" class="com.zwxu.lc.um.dao.AccountDao" /> 
     <bean id="studentDao" class="com.zwxu.lc.um.dao.StudentDao" /> 
+    <bean id="menuRoleDao" class="com.zwxu.lc.um.dao.MenuRoleDao" /> 
+    <bean id="menuDao" class="com.zwxu.lc.um.dao.MenuDao" /> 
 
 
 

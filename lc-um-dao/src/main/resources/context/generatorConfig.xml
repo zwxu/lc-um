@@ -5,7 +5,7 @@
 <generatorConfiguration>
    
    <classPathEntry
-        location="D:\maven\respositories\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+        location="D:\Program Files\maven\respositories\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
     <context id="DB2Tables"    targetRuntime="MyBatis3">
        
 
@@ -15,7 +15,7 @@
     <sqlMapGenerator targetPackage="com.zwxu.lc.um.mapper" targetProject="lc-um-dao/src/main/java" />
     <javaClientGenerator targetPackage="com.zwxu.lc.um.mapper" targetProject="lc-um-dao/src/main/java" type="XMLMAPPER" />
     
-        <table tableName="t_student" domainObjectName="Student">
+        <table tableName="t_Menu" domainObjectName="Menu">
        <generatedKey column="ID" sqlStatement="MYSQL" identity="true"  />
        </table>
     </context>
