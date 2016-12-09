@@ -118,6 +118,11 @@
 	<artifactId>lc-um-dao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	<dependency>
+	<groupId>com.google.code.gson</groupId>
+	<version>2.2.4</version>
+	<artifactId>gson</artifactId>
+	</dependency>
 	 <dependency>
    <groupId>org.sitemesh</groupId>
    <artifactId>sitemesh</artifactId>
