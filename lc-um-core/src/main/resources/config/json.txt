@@ -1,0 +1,1 @@
+{"app":"yyhlweb","events":[{"type":"come","target":"com.youyuan.yyhl.activity.MainActivity","time":"2013-09-06 12:35:59"},{"type":"cbtn","target":"phoneBack","time":"2013-09-06 12:37:09"},{"type":"cbtn","target":"dialogExit","time":"2013-09-06 12:37:11"},{"type":"leave","target":"","time":"2013-09-06 12:37:11"}],"clientData":{"fid":"45001","platform":"android","os_ver":"4.2.2"}}
