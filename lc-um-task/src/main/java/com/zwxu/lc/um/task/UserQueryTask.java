@@ -33,11 +33,7 @@ public class UserQueryTask {
 		logger.info("start userQuery");
 		
 		List<AccountInfoResponse> list = uqService.query(0);
-		for(AccountInfoResponse info:list)
-		{
-			System.out.println(info.getUsername());
-		}
-
+		
 		logger.info("end userQuery");
 	}
 	
