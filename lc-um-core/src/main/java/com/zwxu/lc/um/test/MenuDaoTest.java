@@ -1,4 +1,4 @@
-package com.zwxu.lc.um.test;
+/*package com.zwxu.lc.um.test;
 
 import java.util.List;
 
@@ -37,3 +37,4 @@ public class MenuDaoTest {
 	    }
 	
 }
+*/

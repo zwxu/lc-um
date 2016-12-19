@@ -16,6 +16,15 @@
                 </property>
    </bean>
 
+	<bean id="memeryCacheClient" class="com.zwxu.lc.um.cache.MemeryCacheClient">
+		<property name="clientMap">
+			<map>
+				<entry key="common">
+					<ref bean="memcachedClient" />
+				</entry>
+			</map>
+		</property>
+	</bean>
      
      
 </beans>
