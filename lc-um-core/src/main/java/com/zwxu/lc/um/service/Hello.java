@@ -1,7 +1,7 @@
 package com.zwxu.lc.um.service;
 
 public class Hello {
-	void print()
+	public void print()
 	{
 		System.out.println("hello world");	
 	}
