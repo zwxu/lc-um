@@ -10,9 +10,18 @@
 	<context:annotation-config />
 	<import resource="classpath:context/context-service.xml" />
 	<import resource="classpath:context/task-service.xml" />
-	<!-- <import resource="classpath:context/context-mq.xml" /> -->
-	<import resource="classpath:context/context-dao.xml" />
+	<!-- activemq.bat即可启动 -->
+	<import resource="classpath:context/context-mq.xml" />
+
     <import resource="classpath:META-INF/spring/spring-keyproperties.xml" />
 
-
+ 	<bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="locations">
+            <list>
+                <value>classpath:/config/config.properties</value>
+            </list>
+        </property>
+    </bean>
 </beans>
