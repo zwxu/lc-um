@@ -4,11 +4,11 @@
 	<select id="selectMenuByRoleId" parameterType="com.zwxu.lc.um.model.MenuRole" resultType="java.lang.Integer">
 		<![CDATA[
            	SELECT
-				menu_id
+				mid
 			FROM
 				t_menu_role
 			WHERE
-				role_id = #{roleId,jdbcType=INTEGER}
+				rid = #{rid,jdbcType=INTEGER}
         ]]> 
 	</select>
 

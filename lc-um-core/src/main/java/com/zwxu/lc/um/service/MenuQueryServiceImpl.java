@@ -21,14 +21,7 @@ public class MenuQueryServiceImpl implements MenuQueryService{
 		info.setMenuName(s.getMenuName());
 		info.setMenuUrl(s.getMenuUrl());
 		info.setParentId(s.getParentId());
-		if(s.getStatus().equals("1"))
-		{
-			info.setStatus(true);
-		}
-		else
-		{
-			info.setStatus(false);
-		}
+		info.setStatus(true);
 		return info;
 	}
 	

@@ -11,7 +11,6 @@
     <result column="id" property="id" jdbcType="INTEGER" />
     <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
     <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
-    <result column="role_id" property="roleId" jdbcType="INTEGER" />
     <result column="parent_id" property="parentId" jdbcType="INTEGER" />
   </resultMap>
 	
@@ -27,11 +26,11 @@
 				id
 			IN(
 				SELECT
-				menu_id
+				mid
 			FROM
 				t_menu_role
 			WHERE
-				role_id = #{roleId,jdbcType=INTEGER}
+				rid = #{rid,jdbcType=INTEGER}
 			);
         ]]> 
     </select>

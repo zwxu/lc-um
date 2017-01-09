@@ -7,6 +7,9 @@
 
 	<jaxws:endpoint id="stundentQueryService1" address="/studentQueryService"
 		implementor="#stundentQueryService" />
+		
+	<jaxws:endpoint id="teacherQueryService1" address="/teacherQueryService"
+	implementor="#teacherQueryService" />
 
 	<jaxws:endpoint id="menuQueryService1" address="/menuQueryService"
 		implementor="#menuQueryService" />

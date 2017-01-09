@@ -17,8 +17,6 @@ public class MenuDaoTest {
 	   @Autowired
 	   MenuDao menuDao;
 	    
-	   @Autowired
-	   Hello hello;
 	    
 	    @Test
 	    public void findByRoleId() {
@@ -26,15 +24,11 @@ public class MenuDaoTest {
 	        List<Menu> list=  menuDao.selectMenu(1);
 	        for(Menu i:list)
 	        {
-	        	System.out.println(i.getMenuName());
+	        	System.out.println(i.getMenuUrl());
 	        }
 	    }
 	    
-	    @Test
-	    void find()
-	    {
-	    	hello.print();
-	    }
+	
 	
 }
 */

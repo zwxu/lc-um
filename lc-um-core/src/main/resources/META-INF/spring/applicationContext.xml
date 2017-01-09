@@ -9,7 +9,7 @@
 	<!-- auto register Processor -->
 	<context:annotation-config />
 	<import resource="classpath:context/context-cxf.xml" />
-	<import resource="classpath:context/context-cache.xml" />
+	<!-- <import resource="classpath:context/context-cache.xml" /> -->
 	<import resource="classpath:context/um-service-bean.xml" />
 	<import resource="classpath:context/context-service.xml" />
 	<import resource="classpath:context/context-dao.xml" />

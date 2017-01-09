@@ -1,4 +1,4 @@
-package com.zwxu.lc.um.ext.service;
+/*package com.zwxu.lc.um.ext.service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,3 +45,4 @@ public class UserConfigService implements InitializingBean {
 
 
 }
+*/

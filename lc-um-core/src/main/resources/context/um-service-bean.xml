@@ -12,6 +12,8 @@
 		
 	<bean id="stundentQueryService" class="com.zwxu.lc.um.service.StudentQueryServiceImpl"></bean>
 	
+	<bean id="teacherQueryService" class="com.zwxu.lc.um.service.TeacherQueryServiceImpl"></bean>
+	
 	<bean id="menuQueryService" class="com.zwxu.lc.um.service.MenuQueryServiceImpl"></bean>
 	
     <bean id="sysConfig" class="com.zwxu.lc.um.service.SysConfig"></bean>
