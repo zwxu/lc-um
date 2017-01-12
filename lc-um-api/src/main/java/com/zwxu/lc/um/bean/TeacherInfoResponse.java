@@ -7,6 +7,8 @@ public class TeacherInfoResponse {
     private String username;
 
     private String department;
+    
+    private String status;
 
 	public String getUsername() {
 		return username;
@@ -22,6 +24,14 @@ public class TeacherInfoResponse {
 
 	public void setDepartment(String department) {
 		this.department = department;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
    

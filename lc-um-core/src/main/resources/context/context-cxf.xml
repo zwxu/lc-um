@@ -5,6 +5,12 @@
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
+	<jaxws:endpoint id="accountService1" address="/accountService"
+		implementor="#accountService" />
+		
+	<jaxws:endpoint id="accountQueryService1" address="/accountQueryService"
+		implementor="#accountQueryService" />
+		
 	<jaxws:endpoint id="stundentQueryService1" address="/studentQueryService"
 		implementor="#stundentQueryService" />
 		
@@ -13,6 +19,9 @@
 
 	<jaxws:endpoint id="menuQueryService1" address="/menuQueryService"
 		implementor="#menuQueryService" />
+		
+	<jaxws:endpoint id="menuRoleQueryService1" address="/menuRoleQueryService"
+		implementor="#menuRoleQueryService" />
 
 
 		

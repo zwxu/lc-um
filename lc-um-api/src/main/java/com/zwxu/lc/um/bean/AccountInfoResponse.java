@@ -1,16 +1,14 @@
 package com.zwxu.lc.um.bean;
-
-import java.io.Serializable;
 import java.util.Date;
 
 
-public class AccountInfoResponse extends BaseResult implements Serializable {
-
-	private static final long serialVersionUID = -2134815484432644948L;
-
+public class AccountInfoResponse {
 	private int id;
 	private String loginname;
 	private String password;
+	private String deleteFlag;
+	private int rid;
+
 
 	private Date createTime;
 	public int getId() {
@@ -18,6 +16,13 @@ public class AccountInfoResponse extends BaseResult implements Serializable {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public int getRid() {
+		return rid;
+	}
+	public void setRid(int rid) {
+		this.rid = rid;
 	}
 	public String getLoginname() {
 		return loginname;
@@ -37,6 +42,14 @@ public class AccountInfoResponse extends BaseResult implements Serializable {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
+	public String getDeleteFlag() {
+		return deleteFlag;
+	}
+	public void setDeleteFlag(String deleteFlag) {
+		this.deleteFlag = deleteFlag;
+	}
+	
+	
 	
 	
 

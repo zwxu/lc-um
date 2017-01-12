@@ -3,15 +3,18 @@ package com.zwxu.lc.um.api;
 import javax.jws.WebService;
 
 import com.zwxu.lc.um.bean.AccountInfoResponse;
+import com.zwxu.lc.um.bean.BaseResult;
 
 
 @WebService
 public interface AccountService {
 
-	AccountInfoResponse create(AccountInfoResponse bean);
+	BaseResult create(AccountInfoResponse bean);
 
-	AccountInfoResponse modify(AccountInfoResponse bean);
+	BaseResult modify(AccountInfoResponse bean);
 
-	boolean delete(int id);
+	BaseResult delete(AccountInfoResponse bean);
+	
+	BaseResult check(AccountInfoResponse bean);
 
 }

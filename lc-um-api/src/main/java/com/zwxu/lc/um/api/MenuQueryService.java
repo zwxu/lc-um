@@ -9,5 +9,5 @@ import com.zwxu.lc.um.bean.QueryMenuResult;
 @WebService
 public interface MenuQueryService {
 
-	QueryMenuResult queryAllByRoleId(int roleId);
+	QueryMenuResult queryAllByUserName(String username);
 }

@@ -12,6 +12,7 @@
     <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
     <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
     <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+    <result column="delete_flag" property="deleteFlag" jdbcType="CHAR" />
   </resultMap>
 	
 	

@@ -5,15 +5,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class BaseResult {
 
-		private String result;	// OK KO
+		private boolean success;	// OK KO
 		private String errCode;
 		private String errMsg;
 
-		public String getResult() {
-			return result;
+		
+		
+		public boolean isSuccess() {
+			return success;
 		}
-		public void setResult(String result) {
-			this.result = result;
+		public void setSuccess(boolean success) {
+			this.success = success;
 		}
 		public String getErrCode() {
 			return errCode;

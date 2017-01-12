@@ -10,11 +10,17 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 		
+	<bean id="accountService" class="com.zwxu.lc.um.service.AccountServiceImpl"></bean>
+		
+	<bean id="accountQueryService" class="com.zwxu.lc.um.service.AccountQueryServiceImpl"></bean>
+	
 	<bean id="stundentQueryService" class="com.zwxu.lc.um.service.StudentQueryServiceImpl"></bean>
 	
 	<bean id="teacherQueryService" class="com.zwxu.lc.um.service.TeacherQueryServiceImpl"></bean>
 	
 	<bean id="menuQueryService" class="com.zwxu.lc.um.service.MenuQueryServiceImpl"></bean>
+	
+	<bean id="menuRoleQueryService" class="com.zwxu.lc.um.service.MenuRoleQueryServiceImpl"></bean>
 	
     <bean id="sysConfig" class="com.zwxu.lc.um.service.SysConfig"></bean>
     
